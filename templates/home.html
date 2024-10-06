@@ -1,0 +1,432 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>ClimateStories</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="{% static 'assets2/logo/favicon.png' %}"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'assets2/css/snipped.css' %}">
+		
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="{% static 'assets2/css/linearicons.css' %}">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/animate.css' %}">
+
+		<!--flaticon.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/flaticon.css' %}">
+
+		<!--slick.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/slick.css' %}">
+		<link rel="stylesheet" href="{% static 'assets2/css/slick-theme.css' %}">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/bootstrap.min.css' %}">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="{% static 'assets2/css/bootsnav.css' %}" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/style.css' %}">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="{% static 'assets2/css/responsive.css' %}">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+	
+	<body>
+	<!--welcome-hero start -->
+	<div class="c-hero-home snipcss0-0-0-1 snipcss-JCw5w">
+		<div class="c-navbar snipcss0-1-1-2 style-dSfjj" id="style-dSfjj">
+			<div class="section-padding snipcss0-2-2-3">
+				<div class="c-container-large snipcss0-3-3-4">
+					<div class="padding-vertical-l snipcss0-4-4-5">
+						<div class="c-nav-wrapper snipcss0-5-5-6"><img src="{% static 'img/logo.png' %}" loading="lazy" alt="" class="c-logo snipcss0-7-7-8 style-zHlyD" id="style-zHlyD">
+							<div class="c-nav-items snipcss0-6-6-9">
+								<div data-hover="true" data-delay="50" class="w-dropdown snipcss0-7-9-10" style="">
+									
+								</div><a href="#explore" class="c-nav-linkblock w-inline-block snipcss0-7-9-23">
+									<div class="c-nav-label-link-s snipcss0-8-23-24">Stories</div>
+								</div><a href="#reviews" class="c-nav-linkblock w-inline-block snipcss0-7-9-23">
+									<div class="c-nav-label-link-s snipcss0-8-23-24">EcoChoices</div>
+								</a><a href="#blog" class="c-nav-linkblock cc-last w-inline-block snipcss0-7-9-25">
+									<div class="c-nav-label-link-s snipcss0-8-25-26">News and Articles</div>
+								</a><a href="#contact" class="c-button cc-white w-inline-block snipcss0-7-9-27">
+									<div class="c-button-label-m snipcss0-8-27-28">Sharing <br> Stories</div>
+								</a>
+								
+                            {% if user.is_authenticated %}
+                                <div class="c-cta-wrapper cc-nav snipcss0-7-9-29"><a href="{%  url 'logout' %}" class="c-button cc-green-fill w-inline-block snipcss0-8-29-30">
+										<div class="c-button-label-m snipcss0-9-30-31">Log out</div>
+									</a></div>
+                                
+                            {% else %}
+                                <div class="c-cta-wrapper cc-nav snipcss0-7-9-29"><a href="{%  url 'register' %}" class="c-button cc-green-fill w-inline-block snipcss0-8-29-30">
+										<div class="c-button-label-m snipcss0-9-30-31">Sign In / Register</div>
+									</a></div>
+                            {%  endif %}
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-padding snipcss0-1-1-46">
+			<div class="margin-bottom-l snipcss0-2-46-47">
+				<div data-w-id="7df1a968-e648-47be-716e-d7da7aee7c15" class="c-container-large snipcss0-3-47-48 style-X8Ias" id="style-X8Ias">
+					<div class="text-aling-center cc-zindex snipcss0-4-48-49">
+						<h1 class="c-headline-l cc-green-gradiant cc-maxwidth snipcss0-5-49-50">Telling the Story of Our Changing Planet<br class="snipcss0-6-50-51"></h1>
+						<div class="padding-vertical-s snipcss0-5-49-52">
+							<h2 class="c-paragraph-xl text-color-white cc-zindex10 snipcss0-6-52-53">Harnessing NASA's Climate Data to Drive Insightful Stories and Scale Climate Action</h2>
+						</div><a href="#explore" class="c-button cc-large cc-green cc-zindex w-inline-block snipcss0-5-49-54">
+							<div class="c-button-label-m snipcss0-6-54-55">Explore How<br class="snipcss0-7-55-56"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-w-id="92fe4644-61fd-937c-df18-dd2437e14f37" class="c-planet-wrapper snipcss0-1-1-57">
+			<div class="section-padding snipcss0-2-57-58">
+				<div class="c-container-medium snipcss0-3-58-59">
+					<div class="c-claim-wrapper snipcss0-4-59-60">
+						<p class="c-paragraph-xxl text-color-white snipcss0-5-60-61">Explore official NASA narratives, discover EcoChoices, and share your stories for a sustainable future</p>
+						<div class="margin-vertical-l cc-flex-vertical snipcss0-5-60-62">
+								<div class="c-button-label-l cc-green-gradient snipcss0-7-63-64">Challenges we aim to address</div><img src="https://cdn.prod.website-files.com/6197b240c9016848a0540bda/6197ece06921a910a6508666_arrow-down%201.svg" loading="lazy" alt="" class="c-icon-arrow cc-margin-top snipcss0-7-63-65">								
+							
+							
+							</div>
+						    <section class="stats-wrapper">
+								<div class="stats-row">
+									<div class="stat-item">
+										<h2>85%+</h2>
+										<p>Water Resources</p>
+									</div>
+									<div class="stat-item">
+										<h2>50%++</h2>
+										<p>Land Desertification</p>
+									</div>
+									<div class="stat-item">
+										<h2>26%+</h2>
+										<p>Agriculture Impact</p>
+									</div>
+									<div class="stat-item">
+										<h2>2C+</h2>
+										<p>Climate Projections</p>
+									</div>
+								</div>
+							</section>
+														
+					</div>
+				</div>
+			</div>
+			<div data-w-id="34a8cc04-62c4-4b89-c473-60a83ed95f80" class="c-fader snipcss0-2-57-66"></div><img src="https://cdn.prod.website-files.com/6197b240c9016848a0540bda/62255965bd957d12d47fb4b5_earth-compress.png" loading="eager" alt="" class="c-planet snipcss0-2-57-67"><img src="https://cdn.prod.website-files.com/6197b240c9016848a0540bda/6197e737a6cbaf164f429194_blur-green.svg" loading="lazy" data-w-id="42e616b3-2c29-9828-9224-a6d195fc19ae" alt="" class="c-planet-glow snipcss0-2-57-68 style-xOKIm" id="style-xOKIm">
+		</div>
+	</div>
+		
+			<div class="container">
+				
+                <div class="welcome-hero-serch-box">
+                    <div class="welcome-hero-form">
+                        <div class="single-welcome-hero-form">
+                            <h3>what?</h3>
+                            <form action="index.html">
+                                <input type="text" placeholder="Ex: warming, rising sea levels, CO₂" />
+                            </form>
+                            <div class="welcome-hero-form-icon">
+                                <i class="flaticon-list-with-dots"></i>
+                            </div>
+                        </div>
+                        <div class="single-welcome-hero-form">
+                            <h3>location</h3>
+                            <form action="index.html">
+                                <input type="text" placeholder="Ex: Tashkent, London, Rome" />
+                            </form>
+                            <div class="welcome-hero-form-icon">
+                                <i class="flaticon-gps-fixed-indicator"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-hero-serch">
+                        <button class="welcome-hero-btn" onclick="window.location.href='#'">
+                             search  <i data-feather="search"></i> 
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+		
+         
+		<!--explore start -->
+		<section id="explore" class="explore">
+			<div class="container">
+				<div class="section-header">
+					<h2>Stories</h2>
+					<p>Real stories from users</p>
+				</div><!--/.section-header-->
+				<div class="explore-content">
+					<div class="row">
+                        {% for story in stories %}
+						<div class=" col-md-4 col-sm-6">
+							<div class="single-explore-item">
+								<div class="single-explore-img">
+									<img src="{{ story.image.url }}" alt="explore image">
+									<div class="single-explore-img-info">
+										<div class="single-explore-image-icon-box">
+											
+										</div>
+									</div>
+								</div>
+								<div class="single-explore-txt bg-theme-1">
+									<h2><a href="#">{{ story.title }}</a></h2>
+									<p class="explore-rating-price">
+									</p>
+									<div class="explore-person">
+										<div class="row">
+											<div class="col-sm-2">
+												<div class="explore-person-img">
+													<a href="#">
+														<img src="{{ story.author.image.url }}" >
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-10">
+												<p>
+													{{ story.content }}
+												</p>
+											</div>
+                                            
+										</div>
+									</div>
+									<div class="explore-open-close-part">
+										<div class="row">
+											<div class="col-sm-5">
+											</div>
+											<div class="col-sm-7">
+											    <div class="col-sm-5"></div>
+                                                  <a  class="button" href="{% url 'story_detail' story.id %}">Read More</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        {% endfor %}
+						
+					</div>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.explore-->
+		<!--explore end -->
+
+		<!--reviews start -->
+		<section id="reviews" class="reviews">
+			<div class="section-header">
+				<h2>EcoChoices</h2>
+				<p>Find Eco organizations, parks and stores</p>
+			</div><!--/.section-header-->
+			<div class="reviews-content">
+				<div class="testimonial-carousel">
+                    {% for echo in echos %}
+				    <div class="single-testimonial-box">
+                    <img src="{{ echo.image.url }}" alt="clients">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-person">
+									<h2>{{ echo.name }}</h2>
+									
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+                                    {% if echo.email %}
+                                        {{ echo.email }}<br>
+                                    {% endif %}
+                                {% if echo.phone_number %}
+                                {{ echo.phone_number }}<br>
+                                {% endif %}
+								</p>
+                           <a href="{% url 'echo_detail' echo.id %}" class="btn btn-primary" style="color: white;">Read More</a>
+
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+				  {% endfor %}
+				</div>
+			</div>
+
+		</section><!--/.reviews-->
+		<!--reviews end -->
+
+		
+
+		<!--blog start -->
+		<section id="blog" class="blog" >
+			<div class="container">
+				<div class="section-header">
+					<h2>news and articles</h2>
+					<p>Always upto date with our latest News and Articles about Climate Change</p>
+				</div><!--/.section-header-->
+				<div class="blog-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="{% static 'assets2/images/blog/b1.jpg' %}" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="#">How to find your Desired Place more quickly</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="{% static 'assets2/images/blog/b2.jpg' %}" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="#">How to find your Desired Place more quickly</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-blog-item">
+								<div class="single-blog-item-img">
+									<img src="{% static 'assets2/images/blog/b3.jpg' %}" alt="blog image">
+								</div>
+								<div class="single-blog-item-txt">
+									<h2><a href="#">How to find your Desired Place more quickly</a></h2>
+									<h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore incididunt ut labore et dolore magna.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+			
+		</section><!--/.blog-->
+		<!--blog end -->
+
+		<!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						do you want to share your own stories?
+					</h2></div>
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="subscription-input-group">
+							<form action="#"><button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
+									creat account
+								</button>
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+		</section><!--/subscription-->	
+		<!--subscription end -->
+
+		<!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+			  <div class="footer-menu">
+					   <div class="row">
+						 <div class="col-sm-3">
+							<div class="navbar-header">
+							  <a class="navbar-brand" href="">Our<span>ClimateStories</span></a>
+						  </div><!--/.navbar-header-->
+						 </div>
+						 <div class="col-sm-9">
+						   <ul class="footer-menu-item">
+								<li class="scroll"><a href="#explore">Stories</a></li>
+								
+								<li class="scroll"><a href="#reviews">EcoChoices</a></li>
+								<li class="scroll"><a href="#blog">News and Articles</a></li>
+								<li class="scroll"><a href="#contact">Share Story</a></li>
+								<li class=" scroll"><a href="#contact">Sign up</a></li>
+							</ul><!--/.nav -->
+						 </div>
+					 </div>
+			  </div>
+			  
+			</div><!--/.container-->
+	  
+			<div id="scroll-Top">
+			  <div class="return-to-top">
+				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+			  </div>
+			  
+			</div><!--/.scroll-Top-->
+			
+			  </footer><!--/.footer-->
+		<!--footer end-->
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="{% static 'assets2/js/jquery.js' %}"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="{% static 'assets2/js/bootstrap.min.js' %}"></script>
+		
+		<!-- bootsnav js -->
+		<script src="{% static 'assets2/js/bootsnav.js' %}"></script>
+
+        <!--feather.min.js-->
+        <script  src="{% static 'assets2/js/feather.min.js' %}"></script>
+
+        <!-- counter js -->
+		<script src="{% static 'assets2/js/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'assets2/js/waypoints.min.js' %}"></script>
+
+        <!--slick.min.js-->
+        <script src="{% static 'assets2/js/slick.min.js' %}"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		     
+        <!--Custom JS-->
+        <script src="{% static 'assets2/js/custom.js' %}"></script>
+        
+    </body>
+	
+</html>
